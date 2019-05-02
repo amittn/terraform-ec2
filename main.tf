@@ -36,7 +36,7 @@ resource "aws_security_group_rule" "ec2_ssh_in_from_my_ip_22" {
 resource "aws_instance" "ec2_a" {
   ami           = "ami-07dc734dc14746eab"
   instance_type = "t2.micro"
-  key_name      = "${var.home_public_key}"
+  key_name      = "${var.ec2_key_pair}"
   vpc_security_group_ids = ["${aws_security_group.ec2_sg.id}"]
 
   iam_instance_profile = "${aws_iam_instance_profile.ec2_instance_profile.id}"

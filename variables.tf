@@ -4,10 +4,9 @@ variable "environment" {
   default = "dev"
 }
 
-variable "home_public_key" {
+variable "ec2_key_pair" {
   type = "string"
   description = "ec2 instance access key"
-  default = "home-aws-key-pair"
 }
 
 variable "my_ip_address" {
